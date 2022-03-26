@@ -22,10 +22,10 @@ public class InputView {
 
         List<Player> players = getPlayers(names);
 
-        List<Participant> participants = new ArrayList<>(players);
-        participants.add(new Dealer());
+        List<Participant> abstractParticipants = new ArrayList<>(players);
+        abstractParticipants.add(new Dealer());
 
-        return participants;
+        return abstractParticipants;
     }
 
     private List<Player> getPlayers(String names) {

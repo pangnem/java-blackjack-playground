@@ -1,6 +1,6 @@
 package nextstep.blackjack.model;
 
-public class Player extends Participant {
+public class Player extends AbstractParticipant {
     private final PlayerInfo playerInfo;
 
     public Player(PlayerInfo playerInfo) {
