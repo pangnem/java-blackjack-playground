@@ -53,38 +53,37 @@ ex) git checkout -b apply-feedback
 - [ ] BlackJackGame
     - [ ] void start()
 
-- [ ] (Enum) Card
-    - Ace - 1 or 11
-    - King, Queen, Jack - 10
-    - [ ] Card draw()
+- [x] Card
+    - [x] Enum Suit
+    - [x] Enum Rank
+    - [x] Card draw()
         - 랜덤한 카드 하나를 반환
 
 - [ ] (abstract) Participant
     - cards
-    - [ ] Participant(List<Card> cards)
+    - [x] Participant(List<Card> cards)
     - [ ] int getTotalCardPoint()
     - [ ] Card hit()
     - [ ] (abstract) boolean isPlayer()
     - [ ] boolean isBlackJack()
 
-- [ ] Player
-    - [ ] String getName()
-- [ ] Dealer
+- [x] Player
+    - [x] String getName()
+- [x] Dealer
 
-- [ ] PlayerInfo
+- [x] PlayerInfo
     - name
     - amount
 
 - [ ] InputView
-    - [ ] List<Participant> inputPlayerInfo()
-        - [ ] 이름 입력받기(쉼표로 구분)
-        - [ ] 베팅금액 입력받기
-        - [ ] 2장의 카드 지급
+    - [x] List<Participant> inputPlayerInfo()
+        - [x] 이름 입력받기(쉼표로 구분)
+        - [x] 베팅금액 입력받기
     - [ ] List<Participant> inputHitWhether(List<Participant> participants)
         - 카드를 더 받을 것인지(hit)에 대한 여부 확인
 
 - [ ] OutputView
-    - [ ] void outputCards(List<Participant> participants)
+    - [x] void outputCards(List<Participant> participants)
     - [ ] void outputResult(List<Participant> participants)
     - [ ] void outputRevenue(List<Participant> participants)
         - 최종 수익을 플레이어의 베팅 금액과 게임 결과에 따라 계산하여 출력한다.
