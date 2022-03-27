@@ -3,8 +3,13 @@ package nextstep.blackjack.model;
 import java.util.Random;
 
 public class Card {
+    private static final Suit DEFAULT_SUIT = Suit.CLUBS;
     private final Rank rank;
     private final Suit suit;
+
+    public Card(Rank rank) {
+        this(rank, DEFAULT_SUIT);
+    }
 
     public Card(Rank rank, Suit suit) {
         this.rank = rank;
@@ -33,6 +38,10 @@ public class Card {
     @Override
     public String toString() {
         return this.rank.getScore() + this.suit.getName();
+    }
+
+    public Rank getRank() {
+        return this.rank;
     }
 
     enum Rank {

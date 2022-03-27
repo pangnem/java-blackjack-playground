@@ -22,4 +22,14 @@ class CardTest {
 
         assertThat(card.toString()).isEqualTo("3다이아몬드");
     }
+
+    @Test
+    void getRank() {
+        Card.Rank rank = Card.Rank.THREE;
+        Card.Suit suit = Card.Suit.DIAMONDS;
+
+        Card card = new Card(rank, suit);
+
+        assertThat(card.getRank()).isEqualTo(Card.Rank.THREE);
+    }
 }

@@ -62,10 +62,12 @@ ex) git checkout -b apply-feedback
 - [ ] (abstract) Participant
     - cards
     - [x] Participant(List<Card> cards)
-    - [ ] int getTotalCardPoint()
-    - [ ] Card hit()
-    - [ ] (abstract) boolean isPlayer()
+    - [x] int getSum()
+    - [x] Card hit()
+    - [x] boolean canHit()
+    - [x] (abstract) boolean isPlayer()
     - [ ] boolean isBlackJack()
+    - [x] boolean isBust()
 
 - [x] Player
     - [x] String getName()
@@ -75,11 +77,11 @@ ex) git checkout -b apply-feedback
     - name
     - amount
 
-- [ ] InputView
+- [x] InputView
     - [x] List<Participant> inputPlayerInfo()
         - [x] 이름 입력받기(쉼표로 구분)
         - [x] 베팅금액 입력받기
-    - [ ] List<Participant> inputHitWhether(List<Participant> participants)
+    - [x] List<Participant> inputHitWhether(List<Participant> participants)
         - 카드를 더 받을 것인지(hit)에 대한 여부 확인
 
 - [ ] OutputView
