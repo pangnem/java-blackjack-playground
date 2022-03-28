@@ -9,14 +9,13 @@ public class Dealer extends AbstractParticipant {
     }
 
     @Override
+    public boolean isPlayer() {
+        return false;
+    }
+
     public boolean canHit() {
         int sum = this.getSum();
 
         return sum <= HIT_SCORE;
-    }
-
-    @Override
-    public boolean isPlayer() {
-        return false;
     }
 }

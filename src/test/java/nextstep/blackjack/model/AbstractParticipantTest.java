@@ -66,4 +66,19 @@ class AbstractParticipantTest {
                         Card.Rank.JACK.getScore()
         );
     }
+
+    @Test
+    void isBlackJackWithRank21() {
+        assertThat(abstractParticipant.isBlackJack()).isFalse();
+
+        List<Card> cards = Arrays.asList(
+                new Card(Card.Rank.JACK),
+                new Card(Card.Rank.ACE)
+        );
+        abstractParticipant.setCards(cards);
+
+        boolean actual = abstractParticipant.isBlackJack();
+
+        assertThat(actual).isTrue();
+    }
 }

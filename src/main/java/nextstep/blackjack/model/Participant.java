@@ -11,5 +11,5 @@ public interface Participant {
 
     boolean isPlayer();
 
-    boolean canHit();
+    boolean isBlackJack();
 }

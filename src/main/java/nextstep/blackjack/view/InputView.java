@@ -31,12 +31,9 @@ public class InputView {
                 }).collect(Collectors.toList());
     }
 
-    public void inputHitWhether(Player player) {
+    public String inputHitWhether(Player player) {
         System.out.println(player.getName() + MORE_CARD_MESSAGE);
 
-        String hitWhether = SCANNER.nextLine().toUpperCase().trim();
-        if ("N".equals(hitWhether)) {
-            player.stay();
-        }
+        return SCANNER.nextLine().toUpperCase().trim();
     }
 }

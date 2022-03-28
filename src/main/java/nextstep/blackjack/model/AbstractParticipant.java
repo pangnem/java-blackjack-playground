@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public abstract class AbstractParticipant implements Participant {
     public static final int DRAW_CARD_COUNT = 2;
-    private static final int BUST_SCORE = 21;
+    private static final int BLACKJACK_SCORE = 21;
 
     protected List<Card> cards = drawCards();
 
@@ -32,7 +32,7 @@ public abstract class AbstractParticipant implements Participant {
     public boolean isBust() {
         int sum = getSum();
 
-        return sum > BUST_SCORE;
+        return sum > BLACKJACK_SCORE;
     }
 
     @Override
@@ -41,6 +41,13 @@ public abstract class AbstractParticipant implements Participant {
         this.cards.add(card);
 
         return card;
+    }
+
+    @Override
+    public boolean isBlackJack() {
+        int sum = getSum();
+
+        return sum == BLACKJACK_SCORE;
     }
 
     protected int getSum() {

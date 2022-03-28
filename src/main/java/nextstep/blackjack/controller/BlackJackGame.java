@@ -17,8 +17,17 @@ public class BlackJackGame {
         Dealer dealer = new Dealer();
         outputView.outputCards(players, dealer);
 
-        players.forEach(this::checkHitOrStay);
-        checkHitOrStay(dealer);
+        checkHitOrStay(players, dealer);
+    }
+
+    private void checkHitOrStay(List<Player> players, Dealer dealer) {
+        players.stream()
+                .filter(player -> !player.isBlackJack())
+                .forEach(this::checkHitOrStay);
+
+        if (!dealer.isBlackJack()) {
+            checkHitOrStay(dealer);
+        }
     }
 
     private void checkHitOrStay(Dealer dealer) {
@@ -30,21 +39,18 @@ public class BlackJackGame {
     }
 
     private void checkHitOrStay(Player player) {
-        inputView.inputHitWhether(player);
-        if (!player.canHit()) {
+        String hitWhether = inputView.inputHitWhether(player);
+        if ("N".equals(hitWhether)) {
             return;
         }
 
-        hitAndOutputCards(player);
-        if (!player.canHit()) {
+        player.hit();
+        outputView.outputCards(player);
+        if (player.isBust()) {
             return;
         }
 
         checkHitOrStay(player);
     }
 
-    private void hitAndOutputCards(Player player) {
-        player.hit();
-        outputView.outputCards(player);
-    }
 }
