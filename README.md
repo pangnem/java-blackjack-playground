@@ -59,14 +59,14 @@ ex) git checkout -b apply-feedback
     - [x] Card draw()
         - 랜덤한 카드 하나를 반환
 
-- [ ] (abstract) Participant
+- [x] (abstract) Participant
     - cards
     - [x] Participant(List<Card> cards)
     - [x] int getSum()
     - [x] Card hit()
     - [x] boolean canHit()
     - [x] (abstract) boolean isPlayer()
-    - [ ] boolean isBlackJack()
+    - [x] boolean isBlackJack()
     - [x] boolean isBust()
 
 - [x] Player
