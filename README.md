@@ -86,6 +86,6 @@ ex) git checkout -b apply-feedback
 
 - [ ] OutputView
     - [x] void outputCards(List<Participant> participants)
-    - [ ] void outputResult(List<Participant> participants)
+    - [x] void outputResult(List<Participant> participants)
     - [ ] void outputRevenue(List<Participant> participants)
         - 최종 수익을 플레이어의 베팅 금액과 게임 결과에 따라 계산하여 출력한다.

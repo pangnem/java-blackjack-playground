@@ -12,4 +12,6 @@ public interface Participant {
     boolean isPlayer();
 
     boolean isBlackJack();
+
+    int getSum();
 }

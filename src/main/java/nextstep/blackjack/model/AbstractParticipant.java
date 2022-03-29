@@ -50,7 +50,7 @@ public abstract class AbstractParticipant implements Participant {
         return sum == BLACKJACK_SCORE;
     }
 
-    protected int getSum() {
+    public int getSum() {
         return cards.stream()
                 .map(Card::getRank)
                 .map(Card.Rank::getScore)

@@ -55,4 +55,17 @@ public class OutputView {
                 .flatMap(Collection::stream)
                 .collect(Collectors.toList());
     }
+
+    public void outputResult(List<Player> players, Dealer dealer) {
+        List<Participant> participants = toParticipants(players, dealer);
+        participants.forEach(this::outputResult);
+    }
+
+    private void outputResult(Participant participant) {
+        int sum = participant.getSum();
+
+        this.printNameAndCards(participant);
+        System.out.printf(" - 결과: %s", sum);
+        printEmptyLine();
+    }
 }

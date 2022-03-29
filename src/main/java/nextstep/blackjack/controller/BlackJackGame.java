@@ -18,6 +18,7 @@ public class BlackJackGame {
         outputView.outputCards(players, dealer);
 
         checkHitOrStay(players, dealer);
+        outputView.outputResult(players, dealer);
     }
 
     private void checkHitOrStay(List<Player> players, Dealer dealer) {
