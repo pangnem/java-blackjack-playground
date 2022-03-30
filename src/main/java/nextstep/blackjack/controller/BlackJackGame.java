@@ -8,9 +8,13 @@ import nextstep.blackjack.view.OutputView;
 import java.util.List;
 
 public class BlackJackGame {
+    private final InputView inputView;
+    private final OutputView outputView;
 
-    private final InputView inputView = new InputView();
-    private final OutputView outputView = new OutputView();
+    public BlackJackGame(InputView inputView, OutputView outputView) {
+        this.inputView = inputView;
+        this.outputView = outputView;
+    }
 
     public void start() {
         List<Player> players = inputView.inputPlayerInfo();
